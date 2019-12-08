@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <title>Subjek - Kata Pijar</title>
     <link rel="icon" href="<?php echo base_url('assets/img/logos/logotitle.ico') ?>">
-    <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'> -->
-    <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/katapijar.css') ?>">
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 
     <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
@@ -47,16 +42,17 @@
                 </li>
 
 
-                <div class="dropdown">
+                <li class="nav-item dropdown">
                     <button style="color: white" class="btn btn-primary btndropdown dropdown-toggle" type="button" data-toggle="dropdown">
                         <?php echo $this->session->userdata('username') ?>
                         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a style="text-transform: none;" href="<?php echo site_url('profile/index/' . $this->session->userdata('user_id')) ?>">Lihat Profil</a></li>
-                        <!-- <li><a style="text-transform: none;" href="#">Pengaturan</a></li> -->
+                        <li><a style="text-transform: none;" href="#">Pengaturan</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a style="text-transform: none;" href="<?php echo site_url('profile/logout') ?>">Keluar</a></li>
                     </ul>
-                </div>
+                </li>
             </ul>
         </div>
     </div>

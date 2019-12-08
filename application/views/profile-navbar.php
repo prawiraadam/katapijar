@@ -17,9 +17,9 @@
     <link href="<?php echo base_url('assets/css/katapijar.css') ?>" rel="stylesheet" type="text/css" >
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="courseNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="profileNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="<?php echo site_url('home') ?>">Kata Pijar</a>
+        <a class="navbar-brand js-scroll-trigger" href="<?php echo site_url('home')?>">Kata Pijar</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
@@ -28,20 +28,15 @@
                 <li class="nav-item">
                     <a style="margin-right: 10px" class="nav-link js-scroll-trigger" href="<?php echo site_url('home') ?>">Home</a>
                 </li>
-                <?php if ($this->session->userdata('user_id') != null) : ?>
-                    <div class="dropdown">
-                        <button style="color: white" class="btn btn-primary btndropdown dropdown-toggle" type="button" data-toggle="dropdown">
-                            <?php echo $this->session->userdata('username') ?>
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a style="text-transform: none;" href="<?php echo site_url('profile/index/' . $this->session->userdata('user_id')) ?>">Lihat Profil</a></li>
-                            <!-- <li><a style="text-transform: none;" href="#">Pengaturan</a></li> -->
-                            <li><a style="text-transform: none;" href="<?php echo site_url('profile/logout') ?>">Keluar</a></li>
-                        </ul>
-                    </div>
-                <?php else : ?>
-                    <a href="<?php echo site_url('home/signIn') ?>" class="btn btn-primary">SIGN IN</a>
-                <?php endif; ?>
+                <div class="dropdown">
+                    <a href="<?php echo site_url('profile/logout') ?>"><button style="background-color: #fed136;cursor:pointer;" class="btn btn-primary" type="button">LOGOUT
+                            <span class="caret"></span></button></a>
+                    <ul class="dropdown-menu">
+                        <!-- <li><a style="text-transform: none;" href="#">Lihat Profil</a></li>
+            <li><a style="text-transform: none;" href="#">Pengaturan</a></li>
+            <li><a style="text-transform: none;" href="#">Keluar</a></li> -->
+                    </ul>
+                </div>
             </ul>
         </div>
     </div>

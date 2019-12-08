@@ -83,7 +83,7 @@
 
             <hr class="mb-4">
 
-            <button class="btn btn-warning bt-lg btn-block" type="submit" style ="background-color:#fec810;">Continue to Checkout</button>
+            <button class="btn btn-warning bt-lg btn-block" type="submit">Continue to Checkout</button>
         </form>
     </div>
 </body>

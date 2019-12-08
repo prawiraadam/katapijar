@@ -18,7 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="paymentNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="courseNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="<?php echo site_url('home') ?>">Kata Pijar</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

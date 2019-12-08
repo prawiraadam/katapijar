@@ -10,10 +10,8 @@
                         <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
                             <img src="<?php echo base_url('assets/img/team/ahmad.jpg') ?>" style="border-radius: 50px">
                         </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center" style = "margin:20px 0 0 0;">
-                            <br>
-                            <br>
-                            <h5><?php echo $this->session->userdata('username') ?></h5>
+                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                            <button style="cursor: pointer;" class="btn btn-defult follow "><i class="fa fa-user-o" aria-hidden="true"></i> FOLLOW</button>
                         </div>
                         <div class="row user-detail-row">
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
@@ -37,8 +35,9 @@
                     <div class="row profile-right-section-row">
                         <div class="col-md-12 profile-header">
                             <div class="row">
-                                <div class="col-md-11 col-sm-6 col-xs-6 profile-header-section1 text-center">
-                                    <h1>Courses</h1><br>
+                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                    <h1><?php echo $this->session->userdata('username') ?></h1>
+                                    <p>Web Developer</p>
                                 </div>
                             </div>
                         </div>
@@ -57,8 +56,7 @@
                                     <?php } 
                                     else :
                                     ?>
-                                    
-                                    <p>Anda belum memiliki course</p>
+                                    <p>anda belum punya course</p>
                                     <?php endif ?>
                                 </div>
                                 <!-- <div class="col-md-4 img-main-rightPart">

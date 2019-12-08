@@ -5,9 +5,9 @@
   <title>Kata Pijar - Media Belajar Mahasiswa</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="icon" href="<?php echo base_url('assets/img/logos/logotitle.ico') ?>">
+  <link href="<?php echo base_url('assets/img/logos/logotitle.ico') ?>" rel="icon">
   <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
-
+  
 
   <!-- Import fonts -->
   <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -17,8 +17,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <!-- <link href="css/katapijar.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/katapijar.css') ?>">
+  <link href="<?php echo base_url('assets/css/katapijar.css') ?>" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -32,7 +31,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item">
+      <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#services">Start!</a>
         </li>
         <li class="nav-item">
