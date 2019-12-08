@@ -37,7 +37,8 @@ class payment extends CI_Controller
 
         $temp = $this->M_course->beli_course($data);
 
-        print_r($data);
+        redirect(site_url('home/index'));
+        // print_r($data);
 
         // var_dump($data);
     }

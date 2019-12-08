@@ -8,25 +8,22 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
                     <div class="row ">
                         <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
-                            <img src="<?php echo base_url('assets/img/team/ahmad.jpg') ?>" style="border-radius: 50px">
+                            <img src="<?php echo base_url('assets/img/portfolio/arti.jpg') ?>" style="border-radius: 50px">
                         </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                        <br>
+                        <br>
+                        <!-- <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
                             <button style="cursor: pointer;" class="btn btn-defult follow "><i class="fa fa-user-o" aria-hidden="true"></i> FOLLOW</button>
-                        </div>
+                        </div> -->
                         <div class="row user-detail-row">
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
                                 <div class="border"></div>
-                                <p>emailuser@blabla.com</p>
+                                <p><?php echo $profil->email?></p>
                             </div>
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
                                 <div class="border"></div>
-                                <p>21-11-2019</p>
+                                <p><?php echo $profil->date_joined?></p>
                                 <!-- Tanggal Join -->
-                            </div>
-                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
-                                <div class="border"></div>
-                                <p>2017</a>
-                                    <!-- Angkatan -->
                             </div>
                         </div>
                     </div>
