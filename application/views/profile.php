@@ -1,0 +1,112 @@
+<body class="bodyprofile">
+    <div class="container main-secction">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                <img style="background-image: url('<?php echo base_url('assets/img/earth.png') ?>')">
+            </div>
+            <div class="row user-left-part">
+                <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                    <div class="row ">
+                        <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                            <img src="<?php echo base_url('assets/img/team/ahmad.jpg') ?>" style="border-radius: 50px">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center" style = "margin:20px 0 0 0;">
+                            <br>
+                            <br>
+                            <h5><?php echo $this->session->userdata('username') ?></h5>
+                        </div>
+                        <div class="row user-detail-row">
+                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+                                <div class="border"></div>
+                                <p>emailuser@blabla.com</p>
+                            </div>
+                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+                                <div class="border"></div>
+                                <p>21-11-2019</p>
+                                <!-- Tanggal Join -->
+                            </div>
+                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+                                <div class="border"></div>
+                                <p>2017</a>
+                                    <!-- Angkatan -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                    <div class="row profile-right-section-row">
+                        <div class="col-md-12 profile-header">
+                            <div class="row">
+                                <div class="col-md-11 col-sm-6 col-xs-6 profile-header-section1 text-center">
+                                    <h1>Courses</h1><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-11 profile-tag-section text-center">
+                                    <?php if ($course != null) :
+                                     foreach ($course as $row) { ?>
+                                        <div class="cardprofile w-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php echo $row->course_name ?></h5>
+                                                <p class="card-text"><?php echo $row->course_desc ?></p>
+                                                <a href="<?php echo site_url('home/subjek/' . $row->course_id . '/0') ?>" class="btn btn-primary">Pelajari</a>
+                                            </div>
+                                        </div><br>
+                                    <?php } 
+                                    else :
+                                    ?>
+                                    
+                                    <p>Anda belum memiliki course</p>
+                                    <?php endif ?>
+                                </div>
+                                <!-- <div class="col-md-4 img-main-rightPart">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row image-right-part">
+                                                <div class="col-md-6 pull-left image-right-detail">
+                                                    <p>LIST OF FRIENDS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="col-md-12 image-right">
+                                            <img src="img/team/adam.jpg">
+                                        </div>
+                                        <div class="col-md-12 image-right-detail-section2">
+                                            <p>Nama Teman 1</p><br>
+                                        </div>
+                                         <div  class="col-md-12 image-right">
+                                            <img src="img/team/ahmad.jpg">
+                                        </div>
+                                        <div class="col-md-12 image-right-detail-section2">
+                                            <p>Nama Teman 2</p><br>
+                                        </div>
+                                         <div  class="col-md-12 image-right">
+                                            <img src="img/team/shadieq.jpg">
+                                        </div>
+                                        <div class="col-md-12 image-right-detail-section2">
+                                            <p>Nama Teman 3</p><br>
+                                        </div>
+                                         <div  class="col-md-12 image-right">
+                                            <img src="img/team/rayhan.jpg">
+                                        </div>
+                                        <div class="col-md-12 image-right-detail-section2">
+                                            <p>Nama Teman 4</p><br>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="<?php echo base_url('assets/js/katapijar.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/profile.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/katapijar.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+
+</body>
