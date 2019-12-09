@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2019 at 01:17 AM
+-- Generation Time: Dec 09, 2019 at 01:32 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -64,8 +64,11 @@ INSERT INTO `course` (`course_id`, `sub_id`, `univ_id`, `course_name`, `course_d
 ('ADRDEV', 'KMPTR', 'TELU', 'Android Development', 'Android software development is the process by which new applications are created for devices running the Android operating system.', '2019-04-01', 100000),
 ('DBSYS', 'KMPTR', 'UGM', 'Database System & Architecture', 'A database is an organized collection of data, generally stored and accessed electronically from a computer system. Where databases are more complex they are often developed using formal design and mo', '2019-02-12', 150000),
 ('IMGPRCS', 'KMPTR', 'TELU', 'Matlab Image Processing', 'image processing is the use of computer algorithms to perform image processing on digital images.', '2019-03-01', 100000),
+('IMMUNSYS', 'BIO', 'UNPAD', 'Immune System', 'Describes how the immune system works', '2019-12-02', 100000),
 ('MCHLR', 'KMPTR', 'ITB', 'Machine Learning', 'Machine Learning merupakan salah satu cabang dari disiplin ilmu Kecerdasan Buatan (Artificial Intellegence) yang membahas mengenai pembangunan sistem yang berdasarkan pada data.', '2019-02-14', 75000),
-('UIUX', 'SNI', 'ISBI', 'UI / UX Development', 'User interface design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with t', '2019-04-02', 80000);
+('PLNTRY', 'FSK', 'ITB', 'The Planetary Objects', 'Detailed explanation about the planetary objects in the universe', '2019-12-05', 150000),
+('UI', 'SNI', 'ISBI', 'UI Development', 'User interface design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with t', '2019-04-02', 80000),
+('UX', 'SNI', 'ISBI', 'UX Development', 'How to build a good UX Design', '2019-12-01', 100000);
 
 -- --------------------------------------------------------
 
@@ -85,7 +88,20 @@ CREATE TABLE `course_owns` (
 --
 
 INSERT INTO `course_owns` (`course_owns_id`, `user_id`, `course_id`, `date_owned`) VALUES
-(1, 1, 'MCHLR', '2019-12-09');
+(1, 1, 'MCHLR', '2019-12-09'),
+(2, 3, 'ADRDEV', '2019-12-09'),
+(3, 3, 'DBSYS', '2019-12-09'),
+(4, 4, 'ADRDEV', '2019-12-09'),
+(5, 4, 'IMGPRCS', '2019-12-09'),
+(6, 4, 'IMGPRCS', '2019-12-09'),
+(7, 5, 'ADRDEV', '2019-12-09'),
+(8, 5, 'DBSYS', '2019-12-09'),
+(9, 5, 'DBSYS', '2019-12-09'),
+(10, 5, 'DBSYS', '2019-12-09'),
+(11, 5, 'DBSYS', '2019-12-09'),
+(12, 8, 'ADRDEV', '2019-12-09'),
+(13, 9, 'ADRDEV', '2019-12-09'),
+(14, 11, 'MCHLR', '2019-12-09');
 
 -- --------------------------------------------------------
 
@@ -148,7 +164,17 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `email`, `password`, `date_joined`) VALUES
-(1, 'shadieq', 'shadieqq@gmail.com', 'bf32d527861c59a176f10ccd1fb1e2eb', '2019-12-09');
+(1, 'Ahmad Satriamulya', 'ahmadrayi44@gmail.com', 'tumpenglontong', '2019-12-09'),
+(2, 'romi', 'romi123@sasa.com', '37f5a1f50adc555f46d93c30bed0219a', '2019-12-09'),
+(3, 'Adam', 'adam@gmail.com', '57ba172a6be125cca2f449826f9980ca', '2019-12-09'),
+(4, 'Adam', 'c@a.com', 'c1f68ec06b490b3ecb4066b1b13a9ee9', '2019-12-09'),
+(5, 'Prawira Adam', 'contohuser@gmail.com', '46f94c8de14fb36680850768ff1b7f2a', '2019-12-09'),
+(6, 'asd', 'asd@as.com', '4297f44b13955235245b2497399d7a93', '2019-12-09'),
+(7, 'Prawira Adam', 'contohuser1@gmail.com', '4297f44b13955235245b2497399d7a93', '2019-12-09'),
+(8, 'Prawira Adam', 'prawiraadam21@gmail.com', '46f94c8de14fb36680850768ff1b7f2a', '2019-12-09'),
+(9, 'Prawira Adam', 'prawiraadam01@gmail.com', '46f94c8de14fb36680850768ff1b7f2a', '2019-12-09'),
+(10, 'Prawira Adam', 'prawiraadam02@gmail.com', '46f94c8de14fb36680850768ff1b7f2a', '2019-12-09'),
+(11, 'shadieq', 'shadieqq@gmail.com', 'bf32d527861c59a176f10ccd1fb1e2eb', '2019-12-09');
 
 -- --------------------------------------------------------
 
@@ -172,11 +198,16 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`vid_id`, `course_id`, `univ_id`, `vid_nama`, `vid_content`, `vid_desc`, `vid_thubnail`, `vid_maker`) VALUES
-(1, 'MCHLR', 'ITB', 'Regresi Linear, pertemuan 1', 'https://www.youtube.com/embed/nk2CQITm_eo', 'sebuah video linear regresi', 'thumb1.jpg', 'Romi Romanda'),
-(2, 'MCHLR', 'ITB', 'Pengenalan Machine Learning', 'https://www.youtube.com/embed/h0e2HAPTGF4', 'Video mengenai hal hal seputar machine learning', 'malin.jpg', 'Romi Romanda'),
+(1, 'MCHLR', 'ITB', 'Regresi Linear, pertemuan 1', 'https://www.youtube.com/watch?v=VKTXVV0eTIY', 'sebuah video linear regresi', 'thumb1.jpg', 'Romi Romanda'),
+(2, 'MCHLR', 'ITB', 'Pengenalan Machine Learning', 'https://www.youtube.com/watch?v=HcqpanDadyQ', 'Video mengenai hal hal seputar machine learning', 'malin.jpg', 'Romi Romanda'),
 (3, 'UIUX', 'ISBI', 'Material Design', 'https://www.youtube.com/watch?v=rrT6v5sOwJg', 'Pengenalan material design', 'matdesign.png', 'Marc Jacobs'),
 (4, 'UIUX', 'ISBI', 'Introduction to UI / UX', 'https://www.youtube.com/watch?v=RtPnVtXw6HU', 'Pengenalan UI / UX', 'uiux.png', 'Marc Jacobs'),
-(5, 'ADRDEV', 'TELU', 'Android Studio Part I', 'https://www.youtube.com/watch?v=g9YblXBQ5uU', 'Pengenalan software android studio', 'androidstudio.jpg', 'Andy Rubin');
+(5, 'ADRDEV', 'TELU', 'Android Studio Part I', 'https://www.youtube.com/embed/K2dodTXARqc', 'Pengenalan software android studio', 'androidstudio.jpg', 'Andy Rubin'),
+(6, 'ADRDEV', 'TELU', 'Android Studio Part II', 'https://www.youtube.com/embed/EOfCEhWq8sg', 'Membuat aplikasi sederhana dengan Android Studio', 'asd', 'TELU'),
+(7, 'IMMUNSYS', 'UNPAD', 'Immune System Part I', 'https://www.youtube.com/embed/zQGOcOUBi6s', 'Every second of your life you are under attack. Bacteria, viruses, spores and more living stuff wants to enter your body and use its resources for itself. The immune system is a powerful army of cells', 'asd', 'UNPAD'),
+(8, 'IMMUNSYS', 'UNPAD', 'Immune System Part II', 'https://www.youtube.com/embed/BSypUV6QUNw', 'One of the key players of our immune system is the complement system. An army of millions and trillions of tiny bombs, which work together in a complex and elegant dance to stop intruders in your body', 'asd', 'UNPAD'),
+(9, 'PLNTRY', 'ITB', 'Neutron Stars', 'https://www.youtube.com/embed/udFxKZRyQt4', 'Neutron stars are one of the most extreme and violent things in the universe. Giant atomic nuclei, only a few kilometers in diameter but as massive as stars. And they owe their existence to the death ', 'asd', 'ITB'),
+(10, 'PLNTRY', 'ITB', 'Black Hole', 'https://www.youtube.com/embed/e-P5IFTqB98', 'Black holes. Lets talk about them.', 'asd', 'ITB');
 
 --
 -- Indexes for dumped tables
@@ -232,19 +263,19 @@ ALTER TABLE `video`
 -- AUTO_INCREMENT for table `course_owns`
 --
 ALTER TABLE `course_owns`
-  MODIFY `course_owns_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `course_owns_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-  MODIFY `vid_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `vid_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
