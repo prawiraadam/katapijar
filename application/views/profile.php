@@ -10,11 +10,9 @@
                         <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
                             <img src="<?php echo base_url('assets/img/portfolio/arti.jpg') ?>" style="border-radius: 50px">
                         </div>
-                        <br>
-                        <br>
-                        <!-- <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
-                            <button style="cursor: pointer;" class="btn btn-defult follow "><i class="fa fa-user-o" aria-hidden="true"></i> FOLLOW</button>
-                        </div> -->
+                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                            <button style="cursor: pointer;" class="btn btn-default follow "><i class="fa fa-user-o" aria-hidden="true"></i> FOLLOW</button>
+                        </div>
                         <div class="row user-detail-row">
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
                                 <div class="border"></div>
