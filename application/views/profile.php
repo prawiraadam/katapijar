@@ -32,7 +32,6 @@
                             <div class="row">
                                 <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
                                     <h1><?php echo $this->session->userdata('username') ?></h1>
-                                    <p>Web Developer</p>
                                 </div>
                             </div>
                         </div>

@@ -58,7 +58,7 @@ class profile extends CI_Controller
             } else {
                 // $message = "Email atau Password salah";
                 // echo "<script type='text/javascript'>alert('$message');</script>";
-                redirect(site_url("subjek"));
+                redirect(site_url("home/signIn"));
             }
         }
     }
@@ -84,7 +84,7 @@ class profile extends CI_Controller
         $user = $this->M_akun->cek_regis($data);
 
         if ($user) { // if user exists
-            if ($user['email'] === $email) {
+            if ($user->email == $email) {
                 array_push($errors, "");
                 $message = "Email telah tersedia";
                 echo "<script type='text/javascript'>alert('$message');</script>";
