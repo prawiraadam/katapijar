@@ -55,18 +55,12 @@ class profile extends CI_Controller
                 // $message = "Kamu telah berhasil login!";
                 // echo "<script type='text/javascript'>alert('$message');</script>";
                 redirect(site_url('home/index'));
-                echo 'MANTUL';
             } else {
                 // $message = "Email atau Password salah";
                 // echo "<script type='text/javascript'>alert('$message');</script>";
-                // redirect(site_url("subjek"));
-                echo 'BANGSAT';
+                redirect(site_url("subjek"));
             }
-        } 
-        // else {
-        //     $message = "Email atau Password tidak boleh kosong";
-        //     echo "<script type='text/javascript'>alert('$message');</script>";
-        // }
+        }
     }
 
     public function registration_action()
@@ -102,7 +96,7 @@ class profile extends CI_Controller
             $this->M_akun->insert_user($data);
             // $message = "Terima kasih telah mendaftar, silakan login!";
             // echo "<script type='text/javascript'>alert('$message');</script>";
-            redirect('home');
+            redirect('home/signIn');
         }
     }
     public function logout()
